@@ -27,8 +27,11 @@ class Spider3():
                 r['type'] = 'https'
             else:
                 r['type'] = 'http'
-            r['host'] = ip.split(':')[0]
-            r['port'] = ip.split(':')[1]
+            try:
+                r['host'] = ip.split(':')[0]
+                r['port'] = ip.split(':')[1]
+            except IndexError:
+                continue
             if anonymity == '高匿':
                 r['anonymity'] = 'h'
             elif anonymity == '普匿':
