@@ -76,7 +76,7 @@ class Engine:
         from spiders import Spider1, Spider2, Spider3
         self.add_spider(Spider1.__name__, Spider1())
         self.add_spider(Spider2.__name__, Spider2())
-        self.add_spider(Spider3.__name__, Spider3())
+        # self.add_spider(Spider3.__name__, Spider3())
 
     def run_spider(self):
         for name, spider in self.spiders.items():

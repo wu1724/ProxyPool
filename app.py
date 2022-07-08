@@ -39,7 +39,7 @@ def get_all_proxy():
 
 @app.route('/proxys')
 def proxys_list():
-    rs = engine.db.get_all(0, 10, 1.5)
+    rs = engine.db.get_all(0, 1, 1.5)
     num = len(rs)
     return render_template('proxys.html', num=num, proxys=rs)
 

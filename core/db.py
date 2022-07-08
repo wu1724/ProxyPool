@@ -84,7 +84,7 @@ class DataBase:
         finally:
             self._close(conn, cursor)
         if len(results) > 0:
-            self.logger.debug('{}:{}已存在'.format(results[0]['host'],results[0]['port']))
+            # self.logger.debug('{}:{}已存在'.format(results[0]['host'],results[0]['port']))
             return True
         else:
             return False
@@ -212,7 +212,8 @@ class DataBase:
             cursor.execute(sql)
             conn.commit()
             if self.logger is not None:
-                self.logger.debug('Update proxy id:{} Anonymity:{} verify:{}'.format(id, anonymity,verify+1))
+                # self.logger.debug('Update proxy id:{} Anonymity:{} verify:{}'.format(id, anonymity,verify+1))
+                pass
         except Exception as e:
             conn.rollback()
             if self.logger is not None:
